@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: #001c55;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umg.edu.controller.MainController">
+   <children>
+       <Pane fx:id="paneltop3" layoutX="211.0" prefHeight="650.0" prefWidth="1090.0" style="-fx-background-color: #e5e5e5;">
+           <children>
+               <Label text="Top3" textFill="WHITE" />
+           </children>
+       </Pane>
+      <Pane fx:id="panelPrincipal" prefHeight="650.0" prefWidth="212.0" style="-fx-background-color: #003566;">
+         <children>
+            <VBox fx:id="panelprincipal" alignment="CENTER" prefHeight="583.0" prefWidth="212.0" spacing="30.0" style="-fx-background-color: #003566;">
+               <children>
+                  <Label alignment="CENTER" prefHeight="38.0" prefWidth="176.0" text="Cuestionario APP" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btingresar" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="25.0" prefWidth="114.0" text="INGRESAR " />
+                  <Button fx:id="bteditar" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="25.0" prefWidth="114.0" text="EDITAR " />
+                  <Button fx:id="btduplicar" layoutX="10.0" layoutY="73.0" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="25.0" prefWidth="114.0" text="DUPLICAR" />
+                  <Button fx:id="bttop3" layoutX="82.0" layoutY="439.0" mnemonicParsing="false" onAction="#top3" prefHeight="25.0" prefWidth="114.0" text="Top 3" />
+                  <Button fx:id="btrealizar" layoutX="82.0" layoutY="412.0" mnemonicParsing="false" onAction="#onClickMenu" prefHeight="25.0" prefWidth="114.0" text="REALIZAR" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="Paneleditar" layoutX="211.0" prefHeight="650.0" prefWidth="1090.0" style="-fx-background-color: #c7f9cc;">
+         <children>
+            <Label text="Editar" textFill="WHITE" />
+         </children>
+      </Pane>
+       <Pane fx:id="panelduplicar" layoutX="211.0" prefHeight="650.0" prefWidth="1090.0" style="-fx-background-color: #83c5be;">
+           <children>
+               <Label text="Duplicar" textFill="WHITE" />
+           </children>
+       </Pane>
+      <Pane fx:id="panelrealizar" layoutX="211.0" prefHeight="650.0" prefWidth="1090.0" style="-fx-background-color: #a4c3b2;">
+          <children>
+              <Label text="Realizar" textFill="WHITE" />
+            <TextArea fx:id="Pregunta" disable="true" layoutX="79.0" layoutY="117.0" prefHeight="68.0" prefWidth="656.0">
+               <font>
+                  <Font size="18.0" />
+               </font></TextArea>
+            <Button fx:id="btSiguiente" layoutX="702.0" layoutY="375.0" mnemonicParsing="false" onAction="#siguiente" text="Siguiente" />
+            <Label layoutX="124.0" layoutY="44.0" text="Elija Cuestionario" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="MostraR1" disable="true" layoutX="236.0" layoutY="266.0" prefHeight="25.0" prefWidth="649.0" />
+            <TextField fx:id="MostrarR2" disable="true" layoutX="236.0" layoutY="313.0" prefHeight="25.0" prefWidth="649.0" />
+            <RadioButton fx:id="Rcontestada1" layoutX="118.0" layoutY="270.0" mnemonicParsing="false" onAction="#unaRespuesta" text="Respuesta 1" />
+            <RadioButton fx:id="Rcontestada2" layoutX="118.0" layoutY="317.0" mnemonicParsing="false" onAction="#unRespuesta" text="Respuesta 2" />
+            <Label layoutX="71.0" layoutY="210.0" prefHeight="30.0" prefWidth="232.0" text="Elija la Opcion Correcta" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <MenuButton fx:id="MenuButon" layoutX="272.0" layoutY="42.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="281.0" text="Cuestionarios">
+              <items>
+                <MenuItem fx:id="menuitem1" mnemonicParsing="false" onAction="#onSelececionarCuestionario1" />
+                <MenuItem fx:id="menuitem2" mnemonicParsing="false" onAction="#onSelececionarCuestionario1" />
+                  <MenuItem fx:id="menuitem3" mnemonicParsing="false" onAction="#onSelececionarCuestionario1" />
+                  <MenuItem fx:id="menuitem4" mnemonicParsing="false" onAction="#onSelececionarCuestionario1" />
+                  <MenuItem fx:id="menuitem5" mnemonicParsing="false" onAction="#onSelececionarCuestionario1" />
+              </items>
+            </MenuButton>
+          </children>
+      </Pane>
+      <Pane fx:id="panelIngresar" layoutX="211.0" prefHeight="650.0" prefWidth="1090.0" style="-fx-background-color: #003566;">
+          <children>
+            <AnchorPane fx:id="panelpreguntas" layoutX="19.0" layoutY="9.0" prefHeight="268.0" prefWidth="1071.0" snapToPixel="false" style="-fx-background-color: #003566;">
+               <children>
+                    <Label alignment="CENTER" layoutX="476.0" layoutY="33.0" prefHeight="30.0" prefWidth="323.0" style="-fx-background-color: #ffb703; -fx-background-radius: 10 10 10 10;" text="Ingresar Pregunta " textFill="#3d35da">
+                     <font>
+                        <Font name="Arial" size="25.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="450.0" layoutY="128.0" prefHeight="56.0" prefWidth="114.0" spacing="20.0">
+                     <children>
+                        <Group>
+                           <children>
+                              <RadioButton fx:id="opc1" mnemonicParsing="false" onAction="#dosBotonn" selected="true" snapToPixel="false" text="Opcion 1" textFill="#f8f8f8" />
+                              <RadioButton fx:id="opc2" layoutY="37.0" mnemonicParsing="false" onAction="#unBotonn" text="Opcion 2" textFill="#f2f2f2" />
+                           </children>
+                        </Group>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="575.0" layoutY="86.0" prefHeight="117.0" prefWidth="464.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="txtIngresarpregunta" />
+                        <TextField fx:id="txtingresarrespuesta" />
+                        <TextField fx:id="txtingresarrespuesta2" />
+                     </children>
+                  </VBox>
+                  <HBox alignment="CENTER" layoutX="580.0" layoutY="203.0" prefHeight="56.0" prefWidth="464.0" spacing="10.0" style="-fx-background-color: #ffb703;">
+                     <children>
+                        <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#onClickAgregarpreGuntayrespuestas" text="Agregar" />
+                        <Button fx:id="btterminar" mnemonicParsing="false" onAction="#onClicterminarCuestionario" text="terminar" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="txcorrelativodecuestio" layoutX="26.0" layoutY="58.0" prefHeight="56.0" prefWidth="300.0" text="INGRESE NOMBRE CUESTIONARIO" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <TextField fx:id="NombreCuest" layoutX="37.0" layoutY="156.0" prefHeight="25.0" prefWidth="308.0" />
+                  <Label layoutX="436.0" layoutY="86.0" prefHeight="17.0" prefWidth="100.0" text="pregunta" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="tablaCuestio" layoutX="7.0" layoutY="411.0" prefHeight="231.0" prefWidth="1071.0">
+              <columns>
+                  <TableColumn fx:id="tcIdcUESTIONARIO" prefWidth="120.0" text="IDE CUESTIONARIO" />
+                <TableColumn fx:id="tcNpregunta" prefWidth="147.0" text="No. Pregunta" />
+                <TableColumn fx:id="tcPregunta" prefWidth="270.0" text="Pregunta" />
+                  <TableColumn fx:id="tcRespuesta" prefWidth="239.0" text="Respuesta" />
+                  <TableColumn fx:id="tcRespuesta2" prefWidth="199.0" text="Respuesta2" />
+                  <TableColumn fx:id="tcEstado" minWidth="0.0" prefWidth="95.0" text="Estado" />
+              </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="347.0" prefHeight="56.0" prefWidth="407.0" text="Preguntas Ingresadas" textFill="#f5f5f5">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+          </children>
+      </Pane>
+   </children>
+</AnchorPane>
